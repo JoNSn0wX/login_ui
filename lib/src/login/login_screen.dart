@@ -19,15 +19,18 @@ class _MyHomePageState extends State<LoginScreen> {
                 children: [
                   _buildImage(),
                   const SizedBox(height: 20),
+                 
                   const TextField(
                     obscureText: false,
                     decoration: InputDecoration(
+                      prefixIcon: Icon(Icons.login),
                         border: OutlineInputBorder(), labelText: 'Login'),
                   ),
                   const SizedBox(height: 20),
                   const TextField(
-                    obscureText: false,
+                    obscureText: true,
                     decoration: InputDecoration(
+                       prefixIcon: Icon(Icons.password),
                         border: OutlineInputBorder(), labelText: 'Password'),
                   ),
                   const SizedBox(height: 20),
@@ -42,7 +45,7 @@ class _MyHomePageState extends State<LoginScreen> {
 
 Widget _buildImage() {
   return SizedBox(
-    height: 180,
+    height: 100,
     child: Image.network(
         'https://yt3.ggpht.com/ytc/AKedOLRt1d4p7bPylasq_66BIC8-k3hkyVjJ2JICQITK=s900-c-k-c0x00ffffff-no-rj'),
   );
